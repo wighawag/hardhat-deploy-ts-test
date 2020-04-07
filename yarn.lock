@@ -704,10 +704,10 @@ buidler-deploy@^0.0.11:
     "@ethersproject/contracts" "^5.0.0-beta.145"
     "@ethersproject/providers" "^5.0.0-beta.156"
 
-buidler-ethers-v5@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/buidler-ethers-v5/-/buidler-ethers-v5-0.0.3.tgz#b6b89dd4e668394f933677037fac6da794cf77d0"
-  integrity sha512-MONVPzc8NtRm5dIsFCdE+ZtIdtpfaO2Sf5RUNwjruLi8pyJA7x+/VC6HUPetAv+nCFR0VRGrCevU+4R18BfS9w==
+buidler-ethers-v5@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/buidler-ethers-v5/-/buidler-ethers-v5-0.0.8.tgz#781f3d79921bd70f0dd3e47b2d3cbe1b372f005d"
+  integrity sha512-o2RkuoLm98b0imgHTRNOSZQp+4cM76CRCCofhP+rJv538LZH55z+1iSZZ3AKIZZeMF6TmasXkgQg+CUDMDXJZA==
 
 bytes@3.1.0:
   version "3.1.0"
