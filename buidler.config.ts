@@ -13,6 +13,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, bre) => {
 });
 
 const config: BuidlerConfig = {
+  // deploymentChainIds: ["31337"],
   namedAccounts: {
     deployer: 0
   }
