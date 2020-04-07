@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist"
+  },
+  "include": ["./scripts", "./test"],
+  "files": [
+    "./buidler.config.ts",
+    "./node_modules/buidler-ethers-v5/src/type-extensions.d.ts"
+  ]
+}
