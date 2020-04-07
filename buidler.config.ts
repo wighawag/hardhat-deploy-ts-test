@@ -1,9 +1,14 @@
+require('dotenv').config()
+import fs from "fs";
 import { task, usePlugin, BuidlerConfig } from "@nomiclabs/buidler/config";
 usePlugin("buidler-ethers-v5");
 usePlugin("buidler-deploy");
 
-// This is a sample Buidler task. To learn how to create your own go to
-// https://buidler.dev/guides/create-task.html
+let mnemonic = process.env.MNEMONIC;
+try {
+  mnemonic = fs.readFileSync(process.env.MNEMONIC_PATH || ".mnemonic").toString()
+} catch(e) {}
+
 task("accounts", "Prints the list of accounts", async (taskArgs, bre) => {
   const accounts = await bre.ethers.getSigners();
 
@@ -13,10 +18,21 @@ task("accounts", "Prints the list of accounts", async (taskArgs, bre) => {
 });
 
 const config: BuidlerConfig = {
-  // deploymentChainIds: ["31337"],
+  solc: {
+    version: '0.5.1',
+  },
   namedAccounts: {
     deployer: 0
+  },
+  networks: {
+    rinkeby: {
+      url: 'https://rinkeby.infura.io/v3/' + process.env.INFURA_TOKEN,
+      accounts: mnemonic ? {
+        mnemonic
+      } : undefined
+    }
   }
+
 };
 
 export default config;
