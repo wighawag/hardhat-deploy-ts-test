@@ -708,20 +708,20 @@ buffer@^5.2.1:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-buidler-deploy@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.1.2.tgz#a9631f513334ef0eb2a6bb2d2653ac9ee18706eb"
-  integrity sha512-sogFbgfURz/4Zd8yE7mA0v0QB6U1xzYQwrtjn3AdRcfONT6ic7nXkxPqwjjWny0yZ8mGi4fbNog4L1Y7ldFDdg==
+buidler-deploy@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.1.4.tgz#138ac1428a49316be6a8121586f8a7b6c6b3ca51"
+  integrity sha512-5KS+yfcQtIsYCbVP3SGO99gRkzyGolFeprkS+46y1cERZtMbv1OEyysn5OVEURfoimG1iA0z55IqcnpQgPmGow==
   dependencies:
     "@ethersproject/bignumber" "^5.0.0-beta.136"
     "@ethersproject/contracts" "^5.0.0-beta.145"
     "@ethersproject/providers" "^5.0.0-beta.156"
     chalk "^4.0.0"
 
-buidler-ethers-v5@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/buidler-ethers-v5/-/buidler-ethers-v5-0.0.11.tgz#aa20550d42fa3a73a6eb607a7a1d1c90ac554651"
-  integrity sha512-f22OIBBQTL4Djy7FkMWugRRva7FHvBzgTnWO5WHJle1QBORBEGPasnAIlWbp/FUY2zc6QSKvvI0QR5ua0NlADw==
+buidler-ethers-v5@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/buidler-ethers-v5/-/buidler-ethers-v5-0.1.0.tgz#7a83f512c8bf22c5ca91034f9d6fd4a07c5cc8e4"
+  integrity sha512-lF2WZgypQBwtgbzgWSBOumvLOVxIzddmxx29uq5keZ9YCRl5X7TA72yE076S+Z6mFHkat5wIpeGxBGsgkh1JYQ==
 
 bytes@3.1.0:
   version "3.1.0"
