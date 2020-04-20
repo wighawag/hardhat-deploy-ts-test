@@ -1,5 +1,10 @@
-import { ethers, deployments, namedAccounts } from "@nomiclabs/buidler";
-const {deployer} = namedAccounts;
+import { ethers, deployments, getNamedAccounts } from "@nomiclabs/buidler";
+
+let deployer;
+before(async function() {
+  const namedAccounts = await getNamedAccounts();
+  deployer = namedAccounts.deployer;
+})
 
 describe("Token", function() {
 
