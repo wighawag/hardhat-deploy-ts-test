@@ -11,6 +11,12 @@ try {
   mnemonic = fs.readFileSync(process.env.MNEMONIC_PATH || ".mnemonic").toString()
 } catch(e) {}
 
+const accounts = mnemonic
+  ? {
+      mnemonic,
+    }
+  : undefined;
+
 task("accounts", "Prints the list of accounts", async (taskArgs, bre) => {
   const accounts = await bre.ethers.getSigners();
 
@@ -27,11 +33,13 @@ const config: BuidlerConfig = {
     deployer: 0
   },
   networks: {
+    coverage: {
+      url: "http://localhost:5458",
+      accounts,
+    },
     rinkeby: {
       url: 'https://rinkeby.infura.io/v3/' + process.env.INFURA_TOKEN,
-      accounts: mnemonic ? {
-        mnemonic
-      } : undefined
+      accounts
     }
   }
 
