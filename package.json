@@ -4,7 +4,7 @@
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "buidler-deploy": "^0.2.1",
+    "buidler-deploy": "^0.3.3",
     "buidler-ethers-v5": "^0.2.0",
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
@@ -17,6 +17,10 @@
     "test": "buidler test",
     "run:rinkeby": "cross-env BUIDLER_NETWORK=rinkeby ts-node --files",
     "deploy:rinkeby": "buidler --network rinkeby deploy",
-    "dev": "buidler listen --export contractsInfo.json"
+    "dev": "buidler listen --export contractsInfo.json",
+    "coverage": "buidler coverage"
+  },
+  "dependencies": {
+    "solidity-coverage": "^0.7.5"
   }
 }
