@@ -18,5 +18,8 @@
     "run:rinkeby": "cross-env BUIDLER_NETWORK=rinkeby ts-node --files",
     "deploy:rinkeby": "buidler --network rinkeby deploy",
     "dev": "buidler listen --export contractsInfo.json"
+  },
+  "dependencies": {
+    "solidity-coverage": "^0.7.5"
   }
 }
