@@ -1,11 +1,11 @@
 {
   "devDependencies": {
-    "@nomiclabs/buidler": "^1.2.0",
+    "@nomiclabs/buidler": "^1.3.5",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "buidler-deploy": "^0.2.1",
-    "buidler-ethers-v5": "^0.2.0",
+    "buidler-deploy": "^0.4.0-beta.1",
+    "buidler-ethers-v5": "^0.2.1",
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
@@ -15,8 +15,10 @@
   },
   "scripts": {
     "test": "buidler test",
-    "run:rinkeby": "cross-env BUIDLER_NETWORK=rinkeby ts-node --files",
-    "deploy:rinkeby": "buidler --network rinkeby deploy",
+    "rinkeby:run": "cross-env BUIDLER_NETWORK=rinkeby ts-node --files",
+    "rinkeby:deploy": "buidler --network rinkeby deploy",
+    "kovan:deploy": "buidler --network 42 deploy",
+    "staging:deploy": "buidler --network staging deploy",
     "dev": "buidler listen --export contractsInfo.json"
   }
 }
