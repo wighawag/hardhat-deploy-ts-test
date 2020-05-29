@@ -5,10 +5,12 @@ import "@nomiclabs/buidler/console.sol";
 contract Greeter {
 
     string greeting;
+    address _admin;
 
     constructor(string memory _greeting) public {
         console.log("Deploying a Greeter with greeting:", _greeting);
         greeting = _greeting;
+        _admin = msg.sender;
     }
 
     function greet() public view returns (string memory) {
@@ -19,6 +21,16 @@ contract Greeter {
         console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
         revert("fake error blocking");
         greeting = _greeting;
+    }
+
+    function setGreetingThatWorks(string memory _greeting) public {
+        console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
+        greeting = _greeting;
+    }
+
+    function setAdmin(address newAdmin) external {
+        require(msg.sender == _admin, "NOT_AUTHORIZED_ADMIN");
+        _admin = newAdmin;
     }
 
 }

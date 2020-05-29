@@ -30,15 +30,23 @@ const config: BuidlerConfig = {
     version: '0.5.1',
   },
   namedAccounts: {
-    deployer: 0
+    deployer: 0,
+    admin: 1,
   },
   networks: {
     coverage: {
-      url: "http://localhost:5458",
-      accounts,
+      url: "http://localhost:5458"
     },
     rinkeby: {
       url: 'https://rinkeby.infura.io/v3/' + process.env.INFURA_TOKEN,
+      accounts
+    },
+    42: {
+      url: 'https://kovan.infura.io/v3/' + process.env.INFURA_TOKEN,
+      accounts
+    },
+    staging: {
+      url: 'https://goerli.infura.io/v3/' + process.env.INFURA_TOKEN,
       accounts
     }
   }

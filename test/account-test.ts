@@ -1,6 +1,5 @@
 import { ethers } from "@nomiclabs/buidler";
 import {Signer} from "ethers";
-import "./fix";
 
 describe("Token", function() {
   let accounts: Signer[];
