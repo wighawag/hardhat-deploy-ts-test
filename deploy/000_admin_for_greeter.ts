@@ -3,10 +3,11 @@ import { BuidlerRuntimeEnvironment, DeployFunction } from "@nomiclabs/buidler/ty
 
 const func: DeployFunction = async function(bre : BuidlerRuntimeEnvironment) {
     const {deployments, getNamedAccounts} = bre;
-    const {execute, log} = deployments;
+    const {execute, log, read} = deployments;
     const {deployer, admin} = await getNamedAccounts();
 
-    await execute("Greeter", {from: deployer}, "setAdmin", admin);
+    const currentAdmin = await read("Greeter", "getAdmin");
+    await execute("Greeter", {from: currentAdmin}, "setAdmin", admin);
     log(`admin set to ${admin}`);
 }
 export default func;

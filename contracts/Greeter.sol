@@ -28,6 +28,11 @@ contract Greeter {
         greeting = _greeting;
     }
 
+
+    function getAdmin() external view returns (address admin) {
+        return _admin;
+    }
+
     function setAdmin(address newAdmin) external {
         require(msg.sender == _admin, "NOT_AUTHORIZED_ADMIN");
         _admin = newAdmin;
