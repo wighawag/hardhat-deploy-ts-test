@@ -18,8 +18,8 @@ contract Greeter {
 
     function setGreeting(string memory _greeting) public {
         console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
-        revert("fake error blocking");
         greeting = _greeting;
+        revert("fake error blocking");
     }
 
     function setGreetingThatWorks(string memory _greeting) public {
