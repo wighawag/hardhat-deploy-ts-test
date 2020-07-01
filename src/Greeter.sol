@@ -1,9 +1,8 @@
-pragma solidity ^0.5.1;
+pragma solidity ^0.6.5;
 
 import "@nomiclabs/buidler/console.sol";
 
 contract Greeter {
-
     string greeting;
 
     constructor(string memory _greeting) public {
@@ -20,5 +19,4 @@ contract Greeter {
         revert("fake error blocking");
         greeting = _greeting;
     }
-
 }
