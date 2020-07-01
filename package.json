@@ -5,19 +5,23 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
     "buidler-deploy": "^0.4.7",
-    "buidler-ethers-v5": "^0.2.0",
+    "buidler-ethers-v5": "^0.2.2",
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "ethers": "^5.0.0-beta.180",
+    "solidity-coverage": "0.7.4",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "postinstall": "node ./.setup.js",
     "test": "buidler test",
-    "run:rinkeby": "cross-env BUIDLER_NETWORK=rinkeby ts-node --files",
-    "deploy:rinkeby": "buidler --network rinkeby deploy",
+    "coverage": "buidler --network coverage coverage",
+    "rinkeby:run": "cross-env BUIDLER_NETWORK=rinkeby ts-node --files",
+    "rinkeby:deploy": "buidler --network rinkeby deploy",
+    "kovan:deploy": "buidler --network 42 deploy",
+    "staging:deploy": "buidler --network staging deploy",
     "dev": "buidler node --export contractsInfo.json"
   }
 }

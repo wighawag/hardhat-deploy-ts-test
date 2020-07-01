@@ -1,5 +1,7 @@
 {
-  "transactionHash": "0x57d2eb7b52c3f964331721432253903399cac0c7c18d4c97e40587b91a2937f1",
+  "receipt": {
+    "transactionHash": "0x57d2eb7b52c3f964331721432253903399cac0c7c18d4c97e40587b91a2937f1"
+  },
   "args": [
     "hi"
   ],
