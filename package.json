@@ -22,6 +22,6 @@
     "rinkeby:deploy": "buidler --network rinkeby deploy",
     "kovan:deploy": "buidler --network 42 deploy",
     "staging:deploy": "buidler --network staging deploy",
-    "dev": "buidler node --export contractsInfo.json"
+    "dev": "buidler node --watch --export contractsInfo.json"
   }
 }
