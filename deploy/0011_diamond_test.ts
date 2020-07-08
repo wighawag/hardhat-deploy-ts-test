@@ -13,8 +13,9 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
 
   await diamond("DiamondExample", {
     from: deployer,
-    facets: ["ActionFacet", "FacetToDelete", "TestFacet"],
+    facets: ["ActionFacet", "NewFacet", "TestFacet"],
     log: true,
   });
 };
 export default func;
+func.skip = async () => true;
