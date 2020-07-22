@@ -8,6 +8,7 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
   const { read } = deployments;
 
   const example = await deployments.get("Example");
+  console.log({ example: example.address });
   console.log(
     `example at ${example.address} : ${await read("Example", "greet")}`
   );

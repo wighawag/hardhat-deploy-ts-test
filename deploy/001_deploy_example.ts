@@ -13,8 +13,9 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
 
   await deploy("Example", {
     from: deployer,
-    proxy: true,
+    proxy: "postUpgrade",
     args: [Greeter.address],
+    log: true,
   });
 };
 export default func;

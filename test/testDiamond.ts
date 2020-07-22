@@ -1,5 +1,6 @@
 import assert from "assert";
 import { ethers, deployments, getNamedAccounts } from "@nomiclabs/buidler";
+const { diamond } = deployments;
 
 import chai, { expect } from "chai";
 import { waffleChai } from "@ethereum-waffle/chai";
@@ -22,7 +23,7 @@ describe("Diamond", function () {
   });
 
   it("hello world fails after upgrade", async function () {
-    await deployments.diamond("DiamondExample", {
+    await diamond.deploy("DiamondExample", {
       from: deployer,
       facets: ["ActionFacet", "NewFacet", "TestFacet"],
     });

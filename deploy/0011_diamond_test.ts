@@ -11,7 +11,7 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
 
   const Greeter = await deployments.get("Greeter");
 
-  await diamond("DiamondExample", {
+  await diamond.deploy("DiamondExample", {
     from: deployer,
     facets: ["ActionFacet", "NewFacet", "TestFacet"],
     log: true,
