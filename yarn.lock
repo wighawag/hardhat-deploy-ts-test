@@ -158,7 +158,7 @@
     "@ethersproject/properties" "^5.0.0"
     bn.js "^4.4.0"
 
-"@ethersproject/bignumber@^5.0.2":
+"@ethersproject/bignumber@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@ethersproject/bignumber/-/bignumber-5.0.5.tgz#31bd7e75aad46ace345fae69b1f5bb120906af1b"
   integrity sha512-24ln7PV0g8ZzjcVZiLW9Wod0i+XCmK6zKkAaxw5enraTIT1p7gVOcSXFSzNQ9WYAwtiFQPvvA+TIO2oEITZNJA==
@@ -272,11 +272,6 @@
   resolved "https://registry.yarnpkg.com/@ethersproject/logger/-/logger-5.0.2.tgz#f24aa14a738a428d711c1828b44d50114a461b8b"
   integrity sha512-NQe3O1/Nwkcp6bto6hsTvrcCeR/cOGK+RhOMn0Zi2FND6gdWsf1g+5ie8gQ1REqDX4MTGP/Y131dZas985ls/g==
 
-"@ethersproject/logger@^5.0.2":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@ethersproject/logger/-/logger-5.0.4.tgz#09fa4765b5691233e3afb6617cb38a700f9dd2e4"
-  integrity sha512-alA2LiAy1LdQ/L1SA9ajUC7MvGAEQLsICEfKK4erX5qhkXE1LwLSPIzobtOWFsMHf2yrXGKBLnnpuVHprI3sAw==
-
 "@ethersproject/networks@^5.0.0":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@ethersproject/networks/-/networks-5.0.1.tgz#c06ac151d0dfec421c1cb98a9153c109b3117111"
@@ -321,7 +316,7 @@
     "@ethersproject/web" "^5.0.0"
     ws "7.2.3"
 
-"@ethersproject/providers@^5.0.2":
+"@ethersproject/providers@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@ethersproject/providers/-/providers-5.0.5.tgz#fa28498ce9683d1d99f6cb11e1a7fe8d4886e0ce"
   integrity sha512-ZR3yFg/m8qDl7317yXOHE7tKeGfoyZIZ/imhVC4JqAH+SX1rb6bdZcSjhJfet7rLmnJSsnYLTgIiVIT85aVLgg==
@@ -1798,18 +1793,17 @@ buffer@^5.2.1:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-buidler-deploy@^0.5.0-beta.6:
-  version "0.5.0-beta.6"
-  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.5.0-beta.6.tgz#c588debfa683fb249bbed9d540701132c82f475d"
-  integrity sha512-pNWVQZH2ndbL808Fw1BxRHAVmSRZl/H+mLk3/xIOKA+UIwHZNrxRn6MSnIqf++QWbvJidAQCZ7nb0399DJpRBA==
+buidler-deploy@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.5.4.tgz#cf568f2c20980e4159184d59d662fd2e523a1c71"
+  integrity sha512-227suMYzQwbIoKCUFu2Pd6VmyMRftybvgwCOilAxnJ75SLZPW72jj4J97W77PZx4BFQEJckATQAlJ98OnPCdwQ==
   dependencies:
     "@ethersproject/abi" "^5.0.2"
     "@ethersproject/abstract-signer" "^5.0.2"
     "@ethersproject/address" "^5.0.2"
-    "@ethersproject/bignumber" "^5.0.2"
+    "@ethersproject/bignumber" "^5.0.5"
     "@ethersproject/contracts" "^5.0.2"
-    "@ethersproject/logger" "^5.0.2"
-    "@ethersproject/providers" "^5.0.2"
+    "@ethersproject/providers" "^5.0.5"
     "@ethersproject/solidity" "^5.0.2"
     "@ethersproject/transactions" "^5.0.2"
     "@ethersproject/wallet" "^5.0.2"
