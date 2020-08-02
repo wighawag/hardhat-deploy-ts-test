@@ -5,7 +5,7 @@
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "buidler-deploy": "^0.5.9",
+    "buidler-deploy": "^0.5.10",
     "buidler-ethers-v5": "^0.2.2",
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
@@ -23,6 +23,6 @@
     "rinkeby:deploy": "buidler --network rinkeby deploy",
     "kovan:deploy": "buidler --network 42 deploy",
     "staging:deploy": "buidler --network staging deploy",
-    "dev": "buidler node --watch --export contractsInfo.json"
+    "dev": "buidler node --reset --watch --export contractsInfo.json"
   }
 }
