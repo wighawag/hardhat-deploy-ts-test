@@ -14,6 +14,13 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
   const currentGreeting = await read("Greeter", "greet");
   log({ currentGreeting });
 
-  await execute("Greeter", { from: deployer }, "setGreetingThatWorks", "hi");
+  if (!bre.network.live) {
+    await execute(
+      "Greeter",
+      { from: deployer, log: true },
+      "setGreetingThatWorks",
+      "hi"
+    );
+  }
 };
 export default func;

@@ -11,7 +11,12 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
   const currentAdmin = await read("Greeter", "getAdmin");
   if (currentAdmin !== admin) {
     log(`setting admin from ${currentAdmin} to ${admin}...`);
-    await execute("Greeter", { from: currentAdmin }, "setAdmin", admin);
+    await execute(
+      "Greeter",
+      { from: currentAdmin, log: true },
+      "setAdmin",
+      admin
+    );
     log(`admin set to ${admin}`);
   }
 };
