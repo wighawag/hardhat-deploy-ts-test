@@ -19,7 +19,7 @@ describe("Diamond", function () {
 
   it("hello world", async function () {
     const DiamondExample = await ethers.getContract("DiamondExample");
-    assert.equal(await DiamondExample.hello("world"), "hello world");
+    assert.equal(await DiamondExample.hello("world"), "hello : world");
   });
 
   it("hello world fails after upgrade", async function () {

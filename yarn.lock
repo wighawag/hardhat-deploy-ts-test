@@ -174,6 +174,13 @@
   dependencies:
     "@ethersproject/logger" "^5.0.0"
 
+"@ethersproject/bytes@^5.0.2":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@ethersproject/bytes/-/bytes-5.0.3.tgz#b3769963ae0188a35713d343890a903bda20af9c"
+  integrity sha512-AyPMAlY+Amaw4Zfp8OAivm1xYPI8mqiUYmEnSUk1CnS2NrQGHEMmFJFiOJdS3gDDpgSOFhWIjZwxKq2VZpqNTA==
+  dependencies:
+    "@ethersproject/logger" "^5.0.0"
+
 "@ethersproject/constants@^5.0.0":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@ethersproject/constants/-/constants-5.0.1.tgz#51426b1d673661e905418ddeefca1f634866860d"
@@ -1893,15 +1900,16 @@ buffer@^5.2.1:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-buidler-deploy@^0.5.14:
-  version "0.5.14"
-  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.5.14.tgz#9542274558eca4e7c24acdc0ffaba0b424e86f3c"
-  integrity sha512-YHjfJIFVVHDHJ5U/5a2PD7uYEbnWPBSGL1cxbuOgJmVsyCLgWkYEXstc2M+0yOK5o2UpehhUlSPSfCqaxVamCg==
+buidler-deploy@^0.6.0-beta.8:
+  version "0.6.0-beta.8"
+  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.6.0-beta.8.tgz#3e42a9a97abdd794ba61b3b1aa6a7faed1b78884"
+  integrity sha512-CHPMo36vK/P7z3OHByjaj4iS2Lrt+Bprh5x8S/OndeLYhw1aTD64KnHiwfJGKCdiQ8sBRsETMW6oX11yj/kUwA==
   dependencies:
     "@ethersproject/abi" "^5.0.2"
     "@ethersproject/abstract-signer" "^5.0.2"
     "@ethersproject/address" "^5.0.2"
     "@ethersproject/bignumber" "^5.0.5"
+    "@ethersproject/bytes" "^5.0.2"
     "@ethersproject/contracts" "^5.0.2"
     "@ethersproject/providers" "^5.0.5"
     "@ethersproject/solidity" "^5.0.2"

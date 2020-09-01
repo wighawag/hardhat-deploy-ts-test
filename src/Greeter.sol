@@ -6,10 +6,10 @@ contract Greeter {
     string greeting;
     address _admin;
 
-    constructor(string memory _greeting) public {
+    constructor(address admin, string memory _greeting) public {
         console.log("Deploying a Greeter with greeting:", _greeting);
         greeting = _greeting;
-        _admin = msg.sender;
+        _admin = admin;
     }
 
     function greet() public view returns (string memory) {

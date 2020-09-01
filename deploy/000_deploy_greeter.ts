@@ -9,7 +9,20 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
 
   const { deployer } = await getNamedAccounts();
 
-  await deploy("Greeter", { from: deployer, args: ["hello world"], log: true });
+  await deploy("Greeter", {
+    from: deployer,
+    args: [deployer, "hello world"],
+    log: true,
+    useCreate2: true,
+  });
+
+  const copyResult = await deploy("Greeter", {
+    from: deployer,
+    args: [deployer, "hello world"],
+    log: true,
+    useCreate2: true,
+  });
+  console.log({ newlyDeployed: copyResult.newlyDeployed });
 
   const currentGreeting = await read("Greeter", "greet");
   log({ currentGreeting });
