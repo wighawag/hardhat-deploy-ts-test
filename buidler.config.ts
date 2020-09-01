@@ -39,7 +39,7 @@ const config: BuidlerConfig = {
   },
   networks: {
     coverage: {
-      url: "http://localhost:5458"
+      url: "http://localhost:5458",
     },
     buidlerevm: {
       accounts: buidlerEvmAccounts,
@@ -53,17 +53,17 @@ const config: BuidlerConfig = {
       accounts,
     },
     42: {
-      url: 'https://kovan.infura.io/v3/' + process.env.INFURA_TOKEN,
-      accounts
+      url: "https://kovan.infura.io/v3/" + process.env.INFURA_TOKEN,
+      accounts,
     },
     staging: {
-      url: 'https://goerli.infura.io/v3/' + process.env.INFURA_TOKEN,
-      accounts
-    }
+      url: "https://rinkeby.infura.io/v3/" + process.env.INFURA_TOKEN,
+      accounts,
+    },
   },
   paths: {
     sources: "src",
-  }
+  },
 };
 
 export default config;
