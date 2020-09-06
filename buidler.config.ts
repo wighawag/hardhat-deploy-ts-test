@@ -65,7 +65,7 @@ const config: BuidlerConfig = {
     sources: "src",
   },
   external: {
-    imports: ["node_modules/@cartesi/arbitration/build/contracts"],
+    artifacts: ["node_modules/@cartesi/arbitration/build/contracts"],
     deployments: {
       rinkeby: ["node_modules/@cartesi/arbitration/build/contracts"],
     },
