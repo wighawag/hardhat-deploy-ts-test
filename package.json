@@ -1,11 +1,12 @@
 {
   "devDependencies": {
+    "@cartesi/arbitration": "^0.4.0",
     "@ethereum-waffle/chai": "^3.0.1",
     "@nomiclabs/buidler": "^1.4.3",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "buidler-deploy": "^0.6.0-beta.12",
+    "buidler-deploy": "^0.6.0-beta.14",
     "buidler-ethers-v5": "^0.2.2",
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",

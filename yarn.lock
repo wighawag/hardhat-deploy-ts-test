@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@cartesi/arbitration@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@cartesi/arbitration/-/arbitration-0.4.0.tgz#ed44d66483cb4c36457f46d215a377b0cf0ede6c"
+  integrity sha512-zYXqzxh+BkAgDdb4i5EWzNPuQ3IUH+6FBn4J+S30OWYjwEU+iC7g1MJlxZaKd59f60dsFM8CMyDzCBs3badUjg==
+  dependencies:
+    "@cartesi/util" "^0.2.1"
+
+"@cartesi/util@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@cartesi/util/-/util-0.2.1.tgz#3108d778f79ceea89252f816a4726d1cde200878"
+  integrity sha512-+DZ5f/x+8NJlIpplSrWrllsGG7lDE1ruBw58ZDinsaSryt1V4MQKeqpiJgDi0tX+/NvPus0mKaumkKltUUMxSQ==
+
 "@ensdomains/ens@^0.4.4":
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/@ensdomains/ens/-/ens-0.4.5.tgz#e0aebc005afdc066447c6e22feb4eda89a5edbfc"
@@ -1900,10 +1912,10 @@ buffer@^5.2.1:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-buidler-deploy@^0.6.0-beta.12:
-  version "0.6.0-beta.12"
-  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.6.0-beta.12.tgz#5b2adfe839d8777059b497f61ed7e7797d73aebf"
-  integrity sha512-ocnxUkdaAAM6gtFjMl628DzpPxaDO+PbbTvtPHskC3w1eIaRll8E7y6pjKfFgkeilpAUoQBbJdNxEhoWpLZSaQ==
+buidler-deploy@^0.6.0-beta.14:
+  version "0.6.0-beta.14"
+  resolved "https://registry.yarnpkg.com/buidler-deploy/-/buidler-deploy-0.6.0-beta.14.tgz#e937e2b9f566f253d9f9791ded0d358e098664ee"
+  integrity sha512-OxoT9L1sKYpJ3r5GSBiLI+dWELWGfr3kBfi0/1Nc33CBL4ZVL+xMSqVJjs3jq5sApNZlZ1jswy4qNd433hdOtg==
   dependencies:
     "@ethersproject/abi" "^5.0.2"
     "@ethersproject/abstract-signer" "^5.0.2"

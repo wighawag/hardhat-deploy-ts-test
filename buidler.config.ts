@@ -64,6 +64,12 @@ const config: BuidlerConfig = {
   paths: {
     sources: "src",
   },
+  external: {
+    imports: ["node_modules/@cartesi/arbitration/build/contracts"],
+    deployments: {
+      rinkeby: ["node_modules/@cartesi/arbitration/build/contracts"],
+    },
+  },
 };
 
 export default config;
