@@ -13,16 +13,15 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
     from: deployer,
     args: [deployer, "hello world"],
     log: true,
-    useCreate2: true,
+    deterministicDeployment: true,
   });
 
   const copyResult = await deploy("Greeter", {
     from: deployer,
     args: [deployer, "hello world"],
     log: true,
-    useCreate2: true,
+    deterministicDeployment: true,
   });
-  console.log({ newlyDeployed: copyResult.newlyDeployed });
 
   const currentGreeting = await read("Greeter", "greet");
   log({ currentGreeting });

@@ -5,15 +5,17 @@ import {
 
 const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
   const { deployments, getNamedAccounts } = bre;
-  const { deploy } = deployments;
+  const { deploy, log } = deployments;
 
   const { deployer } = await getNamedAccounts();
 
-  const instantiator = await deployments.get("MMInstantiator");
-  console.log({
-    address: instantiator.address,
-    transactionHash: instantiator.transactionHash,
-  });
+  const instantiator = await deployments.getOrNull("MMInstantiator");
+  if (instantiator) {
+    log("current instantiator", {
+      address: instantiator.address,
+      transactionHash: instantiator.transactionHash,
+    });
+  }
 
   await deploy("MMInstantiator", {
     from: deployer,

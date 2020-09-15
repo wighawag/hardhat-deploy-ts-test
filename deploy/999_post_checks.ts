@@ -5,13 +5,11 @@ import {
 
 const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
   const { deployments } = bre;
-  const { read } = deployments;
+  const { read, log } = deployments;
 
   const example = await deployments.get("Example");
-  console.log({ example: example.address });
-  console.log(
-    `example at ${example.address} : ${await read("Example", "greet")}`
-  );
+  log({ example: example.address });
+  log(`example at ${example.address} : ${await read("Example", "greet")}`);
 };
 
 export default func;
