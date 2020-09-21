@@ -35,6 +35,7 @@ const config: BuidlerConfig = {
   },
   namedAccounts: {
     deployer: 0,
+    proxyOwner: 1,
     admin: "0x5B9d721f482E60efA99e555Cb59c7DBF4Df15Dc7",
   },
   networks: {

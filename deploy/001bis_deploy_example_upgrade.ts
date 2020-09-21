@@ -7,17 +7,17 @@ const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
   const { deployments, getNamedAccounts } = bre;
   const { deploy } = deployments;
 
-  const { deployer, proxyOwner } = await getNamedAccounts();
+  const { proxyOwner } = await getNamedAccounts();
 
-  const Greeter = await deployments.get("Greeter");
+  const Greeter2 = await deployments.get("Greeter2");
 
   await deploy("Example", {
-    from: deployer,
+    from: proxyOwner,
     proxy: {
       methodName: "postUpgrade",
       owner: proxyOwner,
     },
-    args: [Greeter.address],
+    args: [Greeter2.address],
     log: true,
   });
 };
