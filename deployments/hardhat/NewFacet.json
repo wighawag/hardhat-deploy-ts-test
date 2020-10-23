@@ -1,0 +1,93 @@
+{
+  "address": "0x3037e0B21e7B8E0BaBAF3611D6D0d5CaC51e67C0",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "hello2",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xf9a04830571ba5308b619396296edcc58beb553665b0b7ec62cc709c83ee2575",
+  "receipt": {
+    "to": null,
+    "from": "0x61c461EcC993aaDEB7e4b47E96d1B8cC37314B20",
+    "contractAddress": "0x3037e0B21e7B8E0BaBAF3611D6D0d5CaC51e67C0",
+    "transactionIndex": 0,
+    "gasUsed": "146899",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xa6499f2325d23f62ad6ed31e7856807dd1bd02a2e9d47c577de59a88ffdf6d3e",
+    "transactionHash": "0xf9a04830571ba5308b619396296edcc58beb553665b0b7ec62cc709c83ee2575",
+    "logs": [],
+    "blockNumber": 14,
+    "cumulativeGasUsed": "146899",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "f9070d25-4509-4712-b2a5-92f19b8f749e",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.5+commit.f956cc89\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"hello2\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"src/diamon_test/NewFacet.sol\":\"NewFacet\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"src/diamon_test/NewFacet.sol\":{\"content\":\"pragma solidity 0.6.5;\\n\\nimport \\\"./StorageLayout.sol\\\";\\n\\ncontract NewFacet is StorageLayout {\\n    function hello2(string calldata name) external view returns (string memory) {\\n        return string(abi.encodePacked(\\\"hello2 \\\", name));\\n    }\\n}\\n\",\"keccak256\":\"0x2a7eed3845ace4236135682a2975b099d3696dbdf08b4b9a0377dcbae2c47f9a\"},\"src/diamon_test/StorageLayout.sol\":{\"content\":\"pragma solidity 0.6.5;\\n\\ncontract StorageLayout {\\n    string internal _name;\\n    uint256 internal _value;\\n}\\n\",\"keccak256\":\"0x01c26ebcbb2d70637f123235468c455b1bb411c55604024256b7514d56d3f483\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101b3806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063befd564714610030575b600080fd5b6100a76004803603602081101561004657600080fd5b810190808035906020019064010000000081111561006357600080fd5b82018360208201111561007557600080fd5b8035906020019184600183028401116401000000008311171561009757600080fd5b9091929391929390505050610122565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100e75780820151818401526020810190506100cc565b50505050905090810190601f1680156101145780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6060828260405160200180807f68656c6c6f322000000000000000000000000000000000000000000000000000815250600701838380828437808301925050509250505060405160208183030381529060405290509291505056fea264697066735822122044dc15c2d555553a72812780c18e23af8cfaa997cddb09e8a0c8bdf17ece8b6564736f6c63430006050033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063befd564714610030575b600080fd5b6100a76004803603602081101561004657600080fd5b810190808035906020019064010000000081111561006357600080fd5b82018360208201111561007557600080fd5b8035906020019184600183028401116401000000008311171561009757600080fd5b9091929391929390505050610122565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100e75780820151818401526020810190506100cc565b50505050905090810190601f1680156101145780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6060828260405160200180807f68656c6c6f322000000000000000000000000000000000000000000000000000815250600701838380828437808301925050509250505060405160208183030381529060405290509291505056fea264697066735822122044dc15c2d555553a72812780c18e23af8cfaa997cddb09e8a0c8bdf17ece8b6564736f6c63430006050033",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8542,
+        "contract": "src/diamon_test/NewFacet.sol:NewFacet",
+        "label": "_name",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_string_storage"
+      },
+      {
+        "astId": 8544,
+        "contract": "src/diamon_test/NewFacet.sol:NewFacet",
+        "label": "_value",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  },
+  "gasEstimates": {
+    "creation": {
+      "codeDepositCost": "87000",
+      "executionCost": "135",
+      "totalCost": "87135"
+    },
+    "external": {
+      "hello2(string)": "infinite"
+    }
+  }
+}

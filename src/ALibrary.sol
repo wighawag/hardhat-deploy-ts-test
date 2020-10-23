@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL
 pragma solidity 0.6.5;
 
-import "@nomiclabs/buidler/console.sol";
+import "hardhat/console.sol";
 
 library ALibrary {
     function twice(uint256 t) external pure returns (uint256) {

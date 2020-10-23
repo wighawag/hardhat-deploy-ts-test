@@ -1,14 +1,14 @@
-import { deployments, ethers } from "@nomiclabs/buidler";
+import {ethers} from 'hardhat';
 
 async function main() {
   const Greeter = await ethers.getContract('Greeter');
   const greet = await Greeter.callStatic.greet();
-  console.log("greet:", greet);
+  console.log('greet:', greet);
 }
 
 main()
   .then(() => process.exit(0))
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
     process.exit(1);
   });

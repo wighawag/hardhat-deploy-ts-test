@@ -1,19 +1,15 @@
 pragma solidity 0.6.5;
 
-import "@nomiclabs/buidler/console.sol";
+import "hardhat/console.sol";
 import "./Greeter.sol";
-import "buidler-deploy/solc_0.6/proxy/Proxied.sol";
+import "hardhat-deploy/solc_0.6/proxy/Proxied.sol";
 
 contract Example is Proxied {
     function greet() public view returns (string memory) {
         return string(abi.encodePacked(_greeter.greet(), " : ", uint2str(_v)));
     }
 
-    function uint2str(uint256 _i)
-        private
-        pure
-        returns (string memory _uintAsString)
-    {
+    function uint2str(uint256 _i) private pure returns (string memory _uintAsString) {
         if (_i == 0) {
             return "0";
         }

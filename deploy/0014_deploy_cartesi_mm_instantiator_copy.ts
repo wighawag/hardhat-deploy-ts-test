@@ -4,18 +4,18 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const {deployments, getNamedAccounts} = hre;
   const {deploy} = deployments;
 
-  const {proxyOwner} = await getNamedAccounts();
+  const {deployer} = await getNamedAccounts();
 
-  const Greeter2 = await deployments.get('Greeter2');
+  const merkeLib = await deployments.get('Merkle');
 
-  await deploy('Example', {
-    from: proxyOwner,
-    proxy: {
-      methodName: 'postUpgrade',
-      owner: proxyOwner,
+  await deploy('MMInstantiatorCopy', {
+    contract: 'MMInstantiator',
+    from: deployer,
+    libraries: {
+      Merkle: merkeLib.address,
     },
-    args: [Greeter2.address],
     log: true,
   });
 };
 export default func;
+func.tags = ['MMInstantiatorCopy', 'Merkle'];

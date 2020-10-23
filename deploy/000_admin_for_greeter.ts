@@ -1,22 +1,14 @@
-import {
-  BuidlerRuntimeEnvironment,
-  DeployFunction,
-} from "@nomiclabs/buidler/types";
+import {HardhatRuntimeEnvironment, DeployFunction} from 'hardhat/types';
 
-const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
-  const { deployments, getNamedAccounts } = bre;
-  const { execute, log, read } = deployments;
-  const { deployer, admin } = await getNamedAccounts();
+const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+  const {deployments, getNamedAccounts} = hre;
+  const {execute, log, read} = deployments;
+  const {deployer, admin} = await getNamedAccounts();
 
-  const currentAdmin = await read("Greeter", "getAdmin");
+  const currentAdmin = await read('Greeter', 'getAdmin');
   if (currentAdmin !== admin) {
     log(`setting admin from ${currentAdmin} to ${admin}...`);
-    await execute(
-      "Greeter",
-      { from: currentAdmin, log: true },
-      "setAdmin",
-      admin
-    );
+    await execute('Greeter', {from: currentAdmin, log: true}, 'setAdmin', admin);
     log(`admin set to ${admin}`);
   }
 };

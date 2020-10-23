@@ -1,13 +1,17 @@
-coverage*
-#Buidler files
+#@nomiclabs/buidler
 cache/
 artifacts/
 
-node_modules/
-.env
-contractsInfo.json
-deployments/buidlerevm/
-deployments/localhost/
+#solidity-coverage
+coverage*
 
+#vscode
 .vscode/*
 !.vscode/settings.json.default
+
+node_modules/
+.env
+
+contractsInfo.json
+deployments/buidlerevm
+deployments/localhost

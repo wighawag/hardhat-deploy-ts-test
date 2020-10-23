@@ -1,6 +1,6 @@
 pragma solidity 0.6.5;
 
-import "@nomiclabs/buidler/console.sol";
+import "hardhat/console.sol";
 
 contract Greeter {
     string greeting;

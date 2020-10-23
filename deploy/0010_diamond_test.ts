@@ -1,19 +1,16 @@
-import {
-  BuidlerRuntimeEnvironment,
-  DeployFunction,
-} from "@nomiclabs/buidler/types";
+import {HardhatRuntimeEnvironment, DeployFunction} from 'hardhat/types';
 
-const func: DeployFunction = async function (bre: BuidlerRuntimeEnvironment) {
-  const { deployments, getNamedAccounts } = bre;
-  const { diamond } = deployments;
+const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+  const {deployments, getNamedAccounts} = hre;
+  const {diamond} = deployments;
 
-  const { deployer } = await getNamedAccounts();
+  const {deployer} = await getNamedAccounts();
 
-  const Greeter = await deployments.get("Greeter");
+  const Greeter = await deployments.get('Greeter');
 
-  await diamond.deploy("DiamondExample", {
+  await diamond.deploy('DiamondExample', {
     from: deployer,
-    facets: ["ActionFacet", "FacetToDelete", "TestFacet"],
+    facets: ['ActionFacet', 'FacetToDelete', 'TestFacet'],
     log: true,
   });
 };
