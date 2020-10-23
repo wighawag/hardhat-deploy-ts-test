@@ -1,4 +1,4 @@
-# Boilerplate for ethereum solidity smart contract development
+# A Repo Used As An Example For What "hardhat-deploy" Offer
 
 ## INSTALL
 
