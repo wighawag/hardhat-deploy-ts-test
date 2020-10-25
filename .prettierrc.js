@@ -6,7 +6,7 @@ module.exports = {
   tabWidth: 2,
   useTabs: false,
   trailingComma: 'es5',
-  bracketSpacing: false,
+  bracketSpacing: true,
   arrowParens: 'always',
   overrides: [
     {

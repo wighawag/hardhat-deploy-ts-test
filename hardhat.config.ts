@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
-import {Wallet} from '@ethersproject/wallet';
-import {HardhatUserConfig} from 'hardhat/types';
+import { Wallet } from '@ethersproject/wallet';
+import { HardhatUserConfig } from 'hardhat/types';
 import 'hardhat-deploy';
 import 'hardhat-deploy-ethers';
 
