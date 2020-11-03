@@ -51,9 +51,9 @@ const config: HardhatUserConfig = {
     sources: 'src',
   },
   external: {
-    artifacts: [
-      'node_modules/@cartesi/arbitration/artifacts',
-      'node_modules/@cartesi/util/artifacts',
+    contracts: [
+      {artifacts: 'node_modules/@cartesi/arbitration/artifacts'},
+      {artifacts: 'node_modules/@cartesi/util/artifacts'},
     ],
     deployments: {
       rinkeby: ['node_modules/@cartesi/arbitration/deployments/rinkeby'],
