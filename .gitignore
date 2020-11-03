@@ -1,13 +1,12 @@
-#@nomiclabs/buidler
 cache/
 artifacts/
 
-#solidity-coverage
 coverage*
 
-#vscode
 .vscode/*
 !.vscode/settings.json.default
+!.vscode/launch.json.default
+!.vscode/extensions.json.default
 
 node_modules/
 .env

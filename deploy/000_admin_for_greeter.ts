@@ -1,4 +1,5 @@
-import {HardhatRuntimeEnvironment, DeployFunction} from 'hardhat/types';
+import {HardhatRuntimeEnvironment} from 'hardhat/types';
+import {DeployFunction} from 'hardhat-deploy/types';
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const {deployments, getNamedAccounts} = hre;
@@ -8,7 +9,12 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const currentAdmin = await read('Greeter', 'getAdmin');
   if (currentAdmin !== admin) {
     log(`setting admin from ${currentAdmin} to ${admin}...`);
-    await execute('Greeter', {from: currentAdmin, log: true}, 'setAdmin', admin);
+    await execute(
+      'Greeter',
+      {from: currentAdmin, log: true},
+      'setAdmin',
+      admin
+    );
     log(`admin set to ${admin}`);
   }
 };
